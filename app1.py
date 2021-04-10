@@ -16,9 +16,9 @@ def index():
 
                             path = request.files['file']
                             path= path.filename
-                            print(path)
                             response = prediction.form_response(path)
-                            return render_template("index1.html", response=response)
+                            result = "The Top Ten Predictions are "
+                            return render_template("index1.html", response=[response],result=result)
 
 
             except Exception as e:
@@ -29,4 +29,4 @@ def index():
           return render_template('index1.html')
 
 if __name__ =="__main__":
-    app.run(host="0.0.0.0",port=5000,debug=True)
+    app.run(debug=True)

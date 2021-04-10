@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import os
-
 from prediction_service import prediction
-
-
 webapp_root = "webapp"
 
 static_dir = os.path.join(webapp_root, "static")
@@ -33,5 +30,5 @@ def index():
     else:
         return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ =="__main__":
+    app.run(debug=True)

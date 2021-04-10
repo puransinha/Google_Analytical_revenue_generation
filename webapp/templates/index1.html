@@ -131,9 +131,14 @@
                     <form>
                         <div class="form-group">
                                 <blockquote class="blockquote">
-                                    <p class="mb-2"> Result </p>
+                                    <p class="mb-2"> Result : {{result}} </p>
                                 </blockquote>
-                            <p>{{ response }}</p>
+
+							{% for table in response %}
+							      {{ table|safe }}
+							{% endfor %}
+
+
                         </div>
                     </form>
                 </div>
